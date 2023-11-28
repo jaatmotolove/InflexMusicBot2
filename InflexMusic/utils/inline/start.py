@@ -1,16 +1,24 @@
 from pyrogram.types import InlineKeyboardButton
 
 import config
-from InflexMusic import app
+from Rudra import app
 
 
 def start_panel(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_1"], url=f"https://t.me/{app.username}?startgroup=true"
-            ),
-            InlineKeyboardButton(text=_["S_B_2"], url=config.SUPPORT_GROUP),
+                text="•─╼⃝𖠁𝐀𝙳𝙳 ◈ 𝐌𝙴 ◈ 𝐁𝙰𝙱𝚈𖠁⃝╾─•",
+                url=f"https://t.me/{app.username}?startgroup=true",
+            )
+        ],
+        [InlineKeyboardButton(text="⚙️𝐅ᴇᴀᴛᴜʀᴇs⚙️", callback_data="settings_back_helper")],
+        [
+            InlineKeyboardButton(text="🐰𝐂ʜᴀɴɴᴇʟ🐰", url=config.SUPPORT_CHANNEL),
+            InlineKeyboardButton(text="✨𝐆ʀᴏᴜᴘ✨", url=config.SUPPORT_CHAT),
+        ],
+        [
+            InlineKeyboardButton(text="🌺𝐎ᴡɴᴇʀ🌺", url=f"https://t.me/pataka_love_jaat"),
         ],
     ]
     return buttons
@@ -20,18 +28,17 @@ def private_panel(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_3"],
-                url=f"https://t.me/{app.username}?startgroup=s&admin=delete_messages+manage_video_chats+pin_messages+invite_users",
+                text="•─╼⃝𖠁𝐀𝙳𝙳 ◈ 𝐌𝙴 ◈ 𝐁𝙰𝙱𝚈𖠁⃝╾─•",
+                url=f"https://t.me/{app.username}?startgroup=true",
             )
         ],
-        [InlineKeyboardButton(text=_["S_B_4"], callback_data="settings_back_helper")],
+        [InlineKeyboardButton(text="⚙️𝐅ᴇᴀᴛᴜʀᴇs⚙️", callback_data="settings_back_helper")],
         [
-            InlineKeyboardButton(text=_["S_B_6"], url=config.SUPPORT_CHANNEL),
-            InlineKeyboardButton(text=_["S_B_2"], url=config.SUPPORT_GROUP),
+            InlineKeyboardButton(text="🐰𝐂ʜᴀɴɴᴇʟ🐰", url=config.SUPPORT_CHANNEL),
+            InlineKeyboardButton(text="✨𝐆ʀᴏᴜᴘ✨", url=config.SUPPORT_CHAT),
         ],
         [
-            InlineKeyboardButton(text=_["S_B_5"], user_id=config.OWNER_ID),
-            InlineKeyboardButton(text=_["S_B_7"], url=config.UPSTREAM_REPO),
+            InlineKeyboardButton(text="🌺𝐎ᴡɴᴇʀ🌺", url=f"https://t.me/pataka_love_jaat"),
         ],
     ]
     return buttons
